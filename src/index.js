@@ -89,6 +89,7 @@ import {
   TextMarkerTool,
 } from './tools/annotation/index.js';
 import { BrushTool } from './tools/brush/index.js';
+import { ScissorsTool } from './tools/segmentation/index.js';
 import {
   CrosshairsTool,
   DoubleTapFitToWindowTool,
@@ -236,6 +237,8 @@ const cornerstoneTools = {
   ZoomMouseWheelTool,
   ZoomTool,
   ZoomTouchPinchTool,
+  // Segmentation
+  ScissorsTool,
   init,
   stackPrefetch,
   stackRenderers,
@@ -335,6 +338,8 @@ export {
   ZoomMouseWheelTool,
   ZoomTool,
   ZoomTouchPinchTool,
+  // Segmentation
+  ScissorsTool,
   init,
   stackPrefetch,
   stackRenderers,
