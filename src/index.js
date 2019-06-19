@@ -82,7 +82,7 @@ import {
   CircleRoiTool,
   CobbAngleTool,
   EllipticalRoiTool,
-  FreehandMouseTool,
+  FreehandRoiTool,
   LengthTool,
   ProbeTool,
   RectangleRoiTool,
@@ -95,7 +95,7 @@ import {
   DoubleTapFitToWindowTool,
   DragProbeTool,
   EraserTool,
-  FreehandSculpterMouseTool,
+  FreehandRoiSculptorTool,
   MagnifyTool,
   PanMultiTouchTool,
   PanTool,
@@ -107,13 +107,15 @@ import {
   StackScrollMultiTouchTool,
   StackScrollTool,
   WwwcRegionTool,
+  ScissorsTool,
+  CorrectionTool,
   WwwcTool,
   ZoomMouseWheelTool,
   ZoomTool,
   ZoomTouchPinchTool,
 } from './tools/index.js';
 
-import { default as imp } from './import.js';
+import { default as importInternalModule } from './importInternalModule.js';
 
 import { default as init } from './init.js';
 
@@ -209,7 +211,7 @@ const cornerstoneTools = {
   CircleRoiTool,
   CobbAngleTool,
   EllipticalRoiTool,
-  FreehandMouseTool,
+  FreehandRoiTool,
   LengthTool,
   ProbeTool,
   RectangleRoiTool,
@@ -221,7 +223,7 @@ const cornerstoneTools = {
   DoubleTapFitToWindowTool,
   DragProbeTool,
   EraserTool,
-  FreehandSculpterMouseTool,
+  FreehandRoiSculptorTool,
   MagnifyTool,
   PanMultiTouchTool,
   PanTool,
@@ -233,6 +235,8 @@ const cornerstoneTools = {
   StackScrollMultiTouchTool,
   StackScrollTool,
   WwwcRegionTool,
+  ScissorsTool,
+  CorrectionTool,
   WwwcTool,
   ZoomMouseWheelTool,
   ZoomTool,
@@ -283,7 +287,7 @@ const cornerstoneTools = {
   SaveAs,
   enableLogger,
   disableLogger,
-  import: imp,
+  importInternalModule,
   register,
   registerSome,
   wwwcSynchronizer,
@@ -310,7 +314,7 @@ export {
   CircleRoiTool,
   CobbAngleTool,
   EllipticalRoiTool,
-  FreehandMouseTool,
+  FreehandRoiTool,
   LengthTool,
   ProbeTool,
   RectangleRoiTool,
@@ -322,7 +326,7 @@ export {
   DoubleTapFitToWindowTool,
   DragProbeTool,
   EraserTool,
-  FreehandSculpterMouseTool,
+  FreehandRoiSculptorTool,
   MagnifyTool,
   PanMultiTouchTool,
   PanTool,
@@ -334,6 +338,8 @@ export {
   StackScrollMultiTouchTool,
   StackScrollTool,
   WwwcRegionTool,
+  ScissorsTool,
+  CorrectionTool,
   WwwcTool,
   ZoomMouseWheelTool,
   ZoomTool,
@@ -395,12 +401,10 @@ export {
   stackImageIndexSynchronizer,
   panZoomSynchronizer,
   requestPoolManager,
+  importInternalModule,
   external,
   EVENTS,
   version,
 };
-
-// This has a weird name, so we can't just import it as 'import';
-export { default as import } from './import.js';
 
 export default cornerstoneTools;
